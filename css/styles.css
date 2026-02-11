@@ -1,0 +1,407 @@
+:root {
+    /* Color Palette - Premium Skincare Aesthetic */
+    --color-primary: #1a1a1a;
+    --color-secondary: #fdfaf6;
+    --color-accent: #d4a373;
+    --color-accent-soft: #e9edc9;
+    --color-text: #333333;
+    --color-text-light: #666666;
+    --color-white: #ffffff;
+    
+    /* Typography */
+    --font-heading: 'Playfair Display', serif;
+    --font-body: 'Inter', sans-serif;
+    
+    /* Spacing & Layout */
+    --container-width: 1200px;
+    --section-padding: 100px 20px;
+    --transition: all 0.3s ease;
+}
+
+/* Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: var(--font-body);
+    color: var(--color-text);
+    background-color: var(--color-secondary);
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+h1, h2, h3 {
+    font-family: var(--font-heading);
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 20px;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    transition: var(--transition);
+}
+
+ul {
+    list-style: none;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+.container {
+    max-width: var(--container-width);
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 14px 32px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 0.85rem;
+    cursor: pointer;
+    transition: var(--transition);
+    border: none;
+}
+
+.btn-primary {
+    background-color: var(--color-primary);
+    color: var(--color-white);
+}
+
+.btn-primary:hover {
+    background-color: var(--color-accent);
+}
+
+.btn-large {
+    background-color: var(--color-primary);
+    color: var(--color-white);
+    padding: 18px 40px;
+}
+
+.btn-large:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+.eyebrow {
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: var(--color-accent);
+    display: block;
+    margin-bottom: 15px;
+}
+
+/* Navbar */
+.navbar {
+    height: 80px;
+    display: flex;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: rgba(253, 250, 246, 0.95);
+    z-index: 1000;
+    border-bottom: 1px solid rgba(0,0,0,0.05);
+}
+
+.navbar .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.logo {
+    font-family: var(--font-heading);
+    font-size: 1.5rem;
+    letter-spacing: 4px;
+    font-weight: 700;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
+.nav-links li a {
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+.nav-links li a:hover {
+    color: var(--color-accent);
+}
+
+/* Hero Section */
+.hero {
+    padding: 160px 0 100px;
+    background: radial-gradient(circle at top right, var(--color-accent-soft), transparent 40%);
+}
+
+.hero-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: center;
+}
+
+.hero-content h1 {
+    font-size: clamp(2.5rem, 5vw, 4rem);
+    margin-bottom: 30px;
+}
+
+.hero-content p {
+    font-size: 1.1rem;
+    color: var(--color-text-light);
+    margin-bottom: 40px;
+    max-width: 500px;
+}
+
+.hero-image img {
+    border-radius: 4px;
+    box-shadow: 20px 20px 0px var(--color-accent-soft);
+    object-fit: cover;
+}
+
+/* Benefits Section */
+.benefits {
+    padding: var(--section-padding);
+    background-color: var(--color-white);
+}
+
+.section-header {
+    text-align: center;
+    max-width: 600px;
+    margin: 0 auto 70px;
+}
+
+.section-header h2 {
+    font-size: 2.5rem;
+}
+
+.benefits-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 40px;
+}
+
+.benefit-card {
+    padding: 40px;
+    background: var(--color-secondary);
+    border-radius: 2px;
+    text-align: center;
+}
+
+.benefit-card .icon-wrapper {
+    width: 80px;
+    height: 80px;
+    margin: 0 auto 25px;
+    overflow: hidden;
+    border-radius: 50%;
+}
+
+.benefit-card h3 {
+    font-size: 1.4rem;
+    margin-bottom: 15px;
+}
+
+.benefit-card p {
+    color: var(--color-text-light);
+    font-size: 0.95rem;
+}
+
+/* Aesthetic Break */
+.full-width-image img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    border-radius: 4px;
+}
+
+/* Testimonials */
+.testimonials {
+    padding: var(--section-padding);
+    background-color: var(--color-secondary);
+}
+
+.testimonial-slider {
+    max-width: 800px;
+    margin: 50px auto 0;
+}
+
+.testimonial-item {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.quote {
+    font-family: var(--font-heading);
+    font-size: 1.6rem;
+    font-style: italic;
+    margin-bottom: 20px;
+    color: var(--color-primary);
+}
+
+.author {
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: var(--color-accent);
+}
+
+/* CTA Section */
+.cta-section {
+    padding: var(--section-padding);
+    background-image: linear-gradient(rgba(26, 26, 26, 0.05), rgba(26, 26, 26, 0.05)), url('https://images.unsplash.com/photo-1556228578-0d85b1a4d52d?w=1600&h=800&fit=crop');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    text-align: center;
+}
+
+.cta-box {
+    background: var(--color-white);
+    padding: 60px 40px;
+    max-width: 600px;
+    margin: 0 auto;
+    border-radius: 2px;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+}
+
+.cta-box h2 {
+    font-size: 2.2rem;
+}
+
+.product-pricing {
+    margin: 25px 0;
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
+    gap: 10px;
+}
+
+.price {
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+.size {
+    color: var(--color-text-light);
+    font-size: 0.9rem;
+}
+
+.btn-xl {
+    width: 100%;
+    font-size: 1rem;
+    padding: 20px;
+    margin-bottom: 15px;
+}
+
+.shipping-note {
+    font-size: 0.8rem;
+    color: var(--color-text-light);
+    font-style: italic;
+}
+
+/* Footer */
+.footer {
+    padding: 80px 0 40px;
+    background-color: var(--color-primary);
+    color: var(--color-white);
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    gap: 60px;
+    margin-bottom: 60px;
+}
+
+.footer-brand .logo {
+    display: block;
+    margin-bottom: 20px;
+}
+
+.footer h4 {
+    font-family: var(--font-body);
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 25px;
+    color: var(--color-accent);
+}
+
+.footer-links ul li, .footer-contact ul li {
+    margin-bottom: 12px;
+    font-size: 0.9rem;
+    color: rgba(255,255,255,0.7);
+}
+
+.footer-links ul li a:hover {
+    color: var(--color-white);
+    padding-left: 5px;
+}
+
+.footer-bottom {
+    border-top: 1px solid rgba(255,255,255,0.1);
+    padding-top: 30px;
+    text-align: center;
+    font-size: 0.8rem;
+    color: rgba(255,255,255,0.5);
+}
+
+/* Responsive Grid Adjustments */
+@media (max-width: 968px) {
+    .hero-grid {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+    
+    .hero-content p {
+        margin: 0 auto 40px;
+    }
+    
+    .hero-image {
+        order: -1;
+    }
+    
+    .footer-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (max-width: 768px) {
+    :root {
+        --section-padding: 60px 20px;
+    }
+    
+    .nav-links {
+        display: none; /* In a real project, we'd add a mobile menu toggle */
+    }
+    
+    .footer-grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+    
+    .hero {
+        padding-top: 120px;
+    }
+}
